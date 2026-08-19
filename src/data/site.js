@@ -35,7 +35,7 @@ export const products = [
     image: '/images/products/crystal.webp',
     tone: 'orange',
     sizes: ['1L', '4L', '5L', '25L', '200L'],
-    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD', 'HD70'],
+    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD70'],
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ export const products = [
     image: '/images/products/poly-rox.webp',
     tone: 'navy',
     sizes: ['4L', '5L'],
-    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD', 'HD70'],
+    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD70'],
   },
   {
     id: 7,
@@ -91,7 +91,7 @@ export const products = [
     image: '/images/products/great-tower.webp',
     tone: 'sky',
     sizes: ['4L', '5L'],
-    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD', 'HD70'],
+    grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD70'],
   },
   {
     id: 9,
@@ -99,6 +99,6 @@ export const products = [
     image: '/images/products/interiality.webp',
     tone: 'navy',
     sizes: ['6L', '7L'],
-    grades: ['10W-30', '15W-40', '20W-50', 'HD50', 'HD', 'HD70'],
+    grades: ['10W-30', '15W-40', '20W-50', 'HD50', 'HD70'],
   },
 ];

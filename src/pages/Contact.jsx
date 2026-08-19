@@ -51,7 +51,7 @@ export default function Contact() {
     { label: t.contact.phone, value: site.phoneDisplay, href: `tel:${site.phoneRaw}`, ltr: true, icon: <PhoneIcon /> },
     { label: t.contact.whatsapp, value: site.phoneDisplay, href: waLink(), ltr: true, external: true, icon: <WaIcon /> },
     { label: t.contact.email, value: site.email, href: `mailto:${site.email}`, ltr: true, icon: <MailIcon /> },
-    { label: t.contact.address, value: t.contact.addressValue, icon: <PinIcon /> },
+    { label: t.contact.address, value: t.contact.addressValue, href: site.mapLink, external: true, icon: <PinIcon /> },
     { label: t.contact.hours, value: t.contact.hoursValue, icon: <ClockIcon /> },
     { label: t.contact.facebook, value: 'Golden Base Company', href: site.facebook, external: true, icon: <FbIcon /> },
   ];
@@ -135,11 +135,19 @@ export default function Contact() {
             <div className="mapwrap card">
               <iframe
                 title="map"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&output=embed`}
+                src={`https://www.google.com/maps?q=${site.mapLat},${site.mapLng}&z=16&hl=en&output=embed`}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
               />
+              <a
+                className="mapwrap__btn btn btn--primary"
+                href={site.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t.contact.directions}
+              </a>
             </div>
           </div>
         </Reveal>

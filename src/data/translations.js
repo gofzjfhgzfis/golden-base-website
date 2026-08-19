@@ -110,6 +110,7 @@ export const translations = {
       hours: 'کاتی کارکردن',
       hoursValue: '٨:٠٠ بەیانی — ٥:٠٠ ئێوارە',
       facebook: 'فەیسبووک',
+      directions: 'ڕێنمایی بۆ شوێنەکە',
       form: {
         title: 'پەیامێکمان بۆ بنێرە',
         name: 'ناو',
@@ -239,6 +240,7 @@ export const translations = {
       hours: 'ساعات العمل',
       hoursValue: '٨:٠٠ صباحًا — ٥:٠٠ مساءً',
       facebook: 'فيسبوك',
+      directions: 'الاتجاهات إلى الموقع',
       form: {
         title: 'أرسل لنا رسالة',
         name: 'الاسم',
@@ -368,6 +370,7 @@ export const translations = {
       hours: 'Working hours',
       hoursValue: '8:00 AM — 5:00 PM',
       facebook: 'Facebook',
+      directions: 'Get directions',
       form: {
         title: 'Send us a message',
         name: 'Name',

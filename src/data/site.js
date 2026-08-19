@@ -13,7 +13,10 @@ export const site = {
   whatsapp: '9647501010003', // بۆ wa.me — بەبێ + و بەبێ سفر
   email: 'marzmariwan@gmail.com',
   facebook: 'https://www.facebook.com/share/1BnL7zLEao/?mibextid=wwXIfr',
-  mapQuery: 'Koya Erbil Road, Erbil, Iraq',
+  // شوێنی وردی کۆمپانیا لەسەر Google Maps
+  mapLat: 36.0752276,
+  mapLng: 44.5516845,
+  mapLink: 'https://maps.app.goo.gl/SBTadPqpJ6cpioHd6',
   foundedYear: 1974,
 };
 

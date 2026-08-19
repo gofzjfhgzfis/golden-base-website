@@ -1,16 +1,70 @@
-# React + Vite
+# Golden Base Company — وێبسایتی فەرمی
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+وێبسایتی کۆمپانیای گۆڵدن بەیس بە React + Vite.
+٣ زمان (کوردی / عەرەبی / ئینگلیزی)، دۆخی تاریک و ڕوون، ئەنیمەیشنی نەرم، و ئۆپتیمایزکراو بۆ مۆبایل و تابلێت و دیسکتۆپ.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## دەستپێکردن
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+پاشان بچۆ بۆ `http://localhost:5173/`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## چۆن ناوەڕۆک بگۆڕم
+
+### ١. بەرهەمەکان
+فایل: `src/data/site.js`
+
+وێنەکان دابنێ لە:
+```
+public/images/products/product-1.jpg
+public/images/products/product-2.jpg
+...
+public/images/products/product-9.jpg
+```
+
+پاشان لە هەمان فایلدا، بۆ هەر بەرهەمێک ئەمانە بگۆڕە:
+- `name` — ناوی بەرهەم بە ٣ زمان
+- `desc` — وەسفی کورت بە ٣ زمان
+- `grade` — پلە (وەک `5W-30`). ئەگەر `—` بێت، نیشان نادرێت.
+
+### ٢. زانیاری پەیوەندی
+فایل: `src/data/site.js` — بەشی `site`
+(ژمارە، ئیمەیل، فەیسبووک، ناونیشانی نەخشە)
+
+### ٣. دەقەکانی وێبسایت
+فایل: `src/data/translations.js`
+هەر سێ زمانەکە لێرەدان — مێژوو، بەهاکان، سەردێڕەکان، هەموویان.
+
+### ٤. لۆگۆ
+`public/images/logo/logo.png`
+
+---
+
+## بڵاوکردنەوە (Deploy)
+
+### GitHub Pages
+لە `.github/workflows/deploy.yml` ئامادەکراوە.
+دوای `git push`، بچۆ بۆ **Settings → Pages → Source: GitHub Actions**.
+
+⚠️ `base` لە `vite.config.js` دەبێت ناوی ڕیپۆزیتۆری بێت.
+
+### Netlify
+1. لە `vite.config.js`، `base` بگۆڕە بۆ `'/'`
+2. لە Netlify، ڕیپۆزیتۆرییەکە هەڵبژێرە
+3. Build command: `npm run build`
+4. Publish directory: `dist`
+
+---
+
+## تەکنەلۆجیا
+- React 19 + Vite
+- React Router
+- Framer Motion (ئەنیمەیشن)
+- CSS Variables (بۆ دۆخی تاریک/ڕوون)

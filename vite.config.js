@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  // ⚠️ بۆ GitHub Pages: base دەبێت ناوی ڕیپۆزیتۆری بێت.
+  //    کاتێک دەیبەیتە Netlify، ئەمە بگۆڕە بۆ '/'
+  base: '/golden-base-website/',
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
+});

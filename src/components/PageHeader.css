@@ -1,0 +1,22 @@
+.pageheader {
+  position: relative;
+  padding-block: clamp(56px, 8vw, 96px) clamp(30px, 4vw, 46px);
+  overflow: hidden;
+}
+
+.pageheader__glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  filter: blur(110px);
+  opacity: 0.2;
+  top: -190px;
+  inset-inline-end: -80px;
+  pointer-events: none;
+}
+[data-theme='dark'] .pageheader__glow { opacity: 0.16; }
+
+.pageheader h1 { margin-bottom: 16px; max-width: 18ch; }
+.pageheader .lead { margin: 0; }

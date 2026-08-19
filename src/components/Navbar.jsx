@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLang } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -11,6 +11,7 @@ export default function Navbar() {
   const { isDark, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -26,6 +27,16 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  // بە نەرمی بگەڕێوە بۆ سەرەوە (ئەگەر پێشتر لەم پەڕەیەدا بین)
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const handleHomeClick = (e, to) => {
+    if (to === location.pathname) {
+      e.preventDefault();
+      scrollTop();
+    }
+  };
+
   const links = [
     { to: '/', label: t.nav.home },
     { to: '/about', label: t.nav.about },
@@ -36,7 +47,14 @@ export default function Navbar() {
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
-        <Link to="/" className="nav__brand" onClick={() => setMenuOpen(false)}>
+        <Link
+          to="/"
+          className="nav__brand"
+          onClick={(e) => {
+            setMenuOpen(false);
+            handleHomeClick(e, '/');
+          }}
+        >
           <img src={asset('images/logo/logo.png')} alt="" className="nav__logo" />
           <span className="nav__name">{t.companyShort}</span>
         </Link>
@@ -47,6 +65,7 @@ export default function Navbar() {
               key={l.to}
               to={l.to}
               end={l.to === '/'}
+              onClick={(e) => handleHomeClick(e, l.to)}
               className={({ isActive }) => `nav__link ${isActive ? 'is-active' : ''}`}
             >
               {l.label}
@@ -122,7 +141,10 @@ export default function Navbar() {
                   <NavLink
                     to={l.to}
                     end={l.to === '/'}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => {
+                      setMenuOpen(false);
+                      handleHomeClick(e, l.to);
+                    }}
                     className={({ isActive }) => `mobilemenu__link ${isActive ? 'is-active' : ''}`}
                   >
                     {l.label}

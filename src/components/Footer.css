@@ -34,6 +34,21 @@
   width: fit-content;
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
+
+/* لینک لەگەڵ ئایکۆن */
+.footer__link--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.fico {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.35s var(--ease);
+}
+.footer__link--icon:hover .fico { transform: scale(1.14); }
+.footer__link--brand:hover .fico { transform: scale(1.14); }
 .footer__link:hover { color: var(--accent); transform: translateX(3px); }
 [dir='rtl'] .footer__link:hover { transform: translateX(-3px); }
 .footer__link--plain:hover { color: var(--text-muted); transform: none; cursor: default; }

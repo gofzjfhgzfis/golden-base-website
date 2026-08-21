@@ -1,4 +1,10 @@
-.pcard { display: flex; flex-direction: column; height: 100%; }
+.pcard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
 
 .pcard__media {
   position: relative;
@@ -49,6 +55,35 @@
   gap: 14px;
   flex: 1;
 }
+
+.pcard__desc {
+  margin: 0;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* نیشانەی جۆری بزوێنەر لەسەر وێنەکە */
+.pcard__engine {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.pcard__engine--petrol { color: #1476A8; }
+.pcard__engine--diesel { color: #C25E0A; }
+.pcard__engine--both   { color: #2E3192; }
+
+.tag--more { color: var(--text-muted); }
 
 .pcard__name {
   margin: 0;

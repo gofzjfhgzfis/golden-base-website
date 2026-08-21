@@ -1,0 +1,115 @@
+.pdetail {
+  position: relative;
+  padding-block: clamp(28px, 4vw, 44px) clamp(56px, 8vw, 90px);
+  overflow: hidden;
+}
+.pdetail__glow {
+  position: absolute;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  filter: blur(120px);
+  opacity: 0.16;
+  top: -200px; inset-inline-end: -60px;
+  pointer-events: none;
+}
+
+.pdetail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.3s var(--ease);
+}
+.pdetail__back:hover { color: var(--accent); }
+.pdetail__backarrow { display: inline-block; transition: transform 0.3s var(--ease); }
+[dir='rtl'] .pdetail__backarrow { transform: scaleX(-1); }
+.pdetail__back:hover .pdetail__backarrow { transform: translateX(-4px); }
+[dir='rtl'] .pdetail__back:hover .pdetail__backarrow { transform: scaleX(-1) translateX(-4px); }
+
+.pdetail__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 4.5vw, 56px);
+  align-items: start;
+}
+
+/* ---- وێنە ---- */
+.pdetail__media {
+  overflow: hidden;
+  background: #F2F4F7;
+  aspect-ratio: 4 / 3;
+}
+.pdetail__media:hover { transform: none; border-color: var(--line); box-shadow: var(--shadow); }
+.pdetail__media img { width: 100%; height: 100%; object-fit: cover; }
+.pdetail__ph {
+  width: 100%; height: 100%;
+  display: grid; place-items: center;
+  color: #8A93A6; font-weight: 700;
+}
+
+/* ---- زانیاری ---- */
+.pdetail__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.pdetail__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.ebadge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  background: var(--bg-sunk);
+}
+.ebadge--petrol { color: var(--brand-sky);   border-color: color-mix(in srgb, var(--brand-sky) 40%, transparent); }
+.ebadge--diesel { color: var(--brand-orange); border-color: color-mix(in srgb, var(--brand-orange) 40%, transparent); }
+.ebadge--both   { color: var(--brand-navy);  border-color: color-mix(in srgb, var(--brand-navy) 45%, transparent); }
+[data-theme='dark'] .ebadge--both { color: #9B9EF0; }
+.ebadge--api { font-family: var(--font-display); color: var(--text-muted); }
+
+.pdetail__desc { font-size: 1.02rem; margin-bottom: 26px; max-width: 56ch; }
+
+.pdetail__spec { margin-bottom: 20px; }
+.pdetail__spectitle {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 9px;
+}
+.pdetail__tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.pdetail__features {
+  list-style: none;
+  margin: 26px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.pdetail__features li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+.pdetail__features svg { color: var(--accent); flex-shrink: 0; }
+
+.pdetail__cta { margin-top: 6px; }
+
+.pdetail__relatedtitle { margin-bottom: 4px; }
+
+@media (max-width: 860px) {
+  .pdetail__grid { grid-template-columns: 1fr; }
+}

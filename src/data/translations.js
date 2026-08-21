@@ -96,6 +96,11 @@ export const translations = {
       sizes: 'قەبارەکان',
       viewAll: 'هەموو بەرهەمەکان',
       inquire: 'داواکاری',
+      inquireWa: 'داواکاری لە ڕێی واتساپ',
+      details: 'وردەکاری',
+      backToAll: 'گەڕانەوە بۆ بەرهەمەکان',
+      related: 'بەرهەمی تر',
+      engine: { petrol: 'بەنزین', diesel: 'دیزل', both: 'بەنزین و دیزل' },
     },
 
     contact: {
@@ -226,6 +231,11 @@ export const translations = {
       sizes: 'الأحجام',
       viewAll: 'جميع المنتجات',
       inquire: 'استفسار',
+      inquireWa: 'استفسار عبر واتساب',
+      details: 'التفاصيل',
+      backToAll: 'العودة إلى المنتجات',
+      related: 'منتجات أخرى',
+      engine: { petrol: 'بنزين', diesel: 'ديزل', both: 'بنزين وديزل' },
     },
 
     contact: {
@@ -356,6 +366,11 @@ export const translations = {
       sizes: 'Sizes',
       viewAll: 'All products',
       inquire: 'Enquire',
+      inquireWa: 'Enquire on WhatsApp',
+      details: 'Details',
+      backToAll: 'Back to products',
+      related: 'Other products',
+      engine: { petrol: 'Petrol', diesel: 'Diesel', both: 'Petrol & diesel' },
     },
 
     contact: {

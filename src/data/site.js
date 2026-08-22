@@ -40,9 +40,9 @@ export const products = [
     sizes: ['1L', '4L', '5L', '25L', '200L'],
     grades: ['5W-30', '10W-30', '15W-40', '20W-50', 'HD50', 'HD70'],
     desc: {
-      ku: 'ڕۆنی synthetic blend بۆ بزوێنەری بەنزین و دیزل، بەتایبەت ئەوانەی زیاتر لە ٥٠٠٠ کم ڕۆیشتوون. پاراستنێکی باشتری بزوێنەر لە کۆبوونەوەی لیتە (sludge) و یارمەتیدەرە بۆ نەهێشتنی کێشەی سیستەمی دەرکردنی دووکەڵ.',
-      ar: 'زيت synthetic blend لمحركات البنزين والديزل، خاصة للمركبات التي تجاوزت 5000 كم. حماية أفضل من تراكم الرواسب ويساعد على منع أعطال نظام العادم.',
-      en: 'A synthetic blend oil for petrol and diesel engines, particularly vehicles past 5,000 km. Better protection against sludge build-up, and helps prevent emission system failure.',
+      ku: 'ڕۆنی synthetic blend بۆ بزوێنەری بەنزین و دیزل، گەرەنتی ٥٠٠٠ کم لەگەڵە. پاراستنێکی باشتری بزوێنەر لە کۆبوونەوەی لیتە (sludge) و یارمەتیدەرە بۆ نەهێشتنی کێشەی سیستەمی دەرکردنی دووکەڵ.',
+      ar: 'زيت synthetic blend لمحركات البنزين والديزل، مع ضمان 5000 كم. حماية أفضل من تراكم الرواسب ويساعد على منع أعطال نظام العادم.',
+      en: 'A synthetic blend oil for petrol and diesel engines, with a 5,000 km guarantee. Better protection against sludge build-up, and helps prevent emission system failure.',
     },
     features: {
       ku: ['پاککەرەوەی بەهێز', 'بۆ ئۆتۆمبێلی کۆن و نوێ', 'پاراستنی بەردەوامی بزوێنەر'],
@@ -82,9 +82,9 @@ export const products = [
     sizes: ['4L'],
     grades: ['5W-30', '10W-30', '10W-40', '15W-40', '20W-50'],
     desc: {
-      ku: 'ڕۆنی Premium Blend لە بنەمای ڕۆنی بەکارنەهێنراو (virgin). بۆ گۆڕینی هەر ٥٠٠٠ کم داڕێژراوە، بەتایبەت بۆ بزوێنەری ئاسیایی.',
-      ar: 'زيت Premium Blend من زيت أساس غير مستعمل (virgin). مصمم للتغيير كل 5000 كم، وخاصة لمحركات المركبات الآسيوية.',
-      en: 'A premium blend built on virgin base oil. Formulated for 5,000 km change intervals, particularly for Asian engines.',
+      ku: 'ڕۆنی Premium Blend لە بنەمای ڕۆنی بەکارنەهێنراو (virgin). گەرەنتی ٥٠٠٠ کم لەگەڵە، بەتایبەت بۆ بزوێنەری ئاسیایی.',
+      ar: 'زيت Premium Blend من زيت أساس غير مستعمل (virgin). مع ضمان 5000 كم، وخاصة لمحركات المركبات الآسيوية.',
+      en: 'A premium blend built on virgin base oil. Comes with a 5,000 km guarantee, particularly for Asian engines.',
     },
     features: {
       ku: ['پاراستنی پیستۆن', 'تەکنەلۆژیای نوێ', 'پاراستنی بەردەوامی بزوێنەر'],
